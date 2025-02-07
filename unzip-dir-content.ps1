@@ -7,5 +7,4 @@ Get-ChildItem -Filter *.zip | ForEach-Object {
     New-Item -Path $dest -ItemType Directory
   }
   Expand-Archive -Force -Path $_.FullName -DestinationPath unzipped/$basename
-  break
 }
